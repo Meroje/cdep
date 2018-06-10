@@ -1,25 +1,25 @@
 {
-  "name": "cdep",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.17.10",
-    "puppeteer": "^1.4.0",
-    "sharp": "^0.20.2"
-  },
-  "devDependencies": {
-    "eslint": "4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "prettier": "1.12.1",
-    "prettier-eslint": "^8.8.1"
-  }
+    "name": "cdep",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./index.js",
+        "test": "eslint ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "lodash": "^4.17.10",
+        "puppeteer": "^1.4.0",
+        "sharp": "^0.20.2"
+    },
+    "devDependencies": {
+        "eslint": "4.19.1",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-prettier": "^2.6.0",
+        "prettier": "1.12.1",
+        "prettier-eslint": "^8.8.1"
+    }
 }

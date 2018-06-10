@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node ./index.js",
-        "test": "eslint ."
+        "test": "eslint . && markdownlint -i node_modules ."
     },
     "keywords": [],
     "author": "",
@@ -19,6 +19,7 @@
         "eslint": "4.19.1",
         "eslint-config-prettier": "^2.9.0",
         "eslint-plugin-prettier": "^2.6.0",
+        "markdownlint-cli": "^0.10.0",
         "prettier": "1.12.1",
         "prettier-eslint": "^8.8.1"
     }

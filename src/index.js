@@ -26,21 +26,21 @@ async function run() {
 
   // Load home
   await page.goto("https://www.caisse-epargne.fr");
-  await page.screenshot({ path: `screenshots/0${i++}.png` });
+  await page.screenshot({ path: `../screenshots/0${i++}.png` });
 
   // Open modal
   await page.click('a[data-target="#pauth"]');
   await page.waitForSelector(".modal-body .step1.in");
-  await page.screenshot({ path: `screenshots/0${i++}.png` });
+  await page.screenshot({ path: `../screenshots/0${i++}.png` });
 
   // Username
   await page.waitForSelector("input#idClient");
   await page.click("input#idClient");
   await page.keyboard.type(CREDS.username);
-  await page.screenshot({ path: `screenshots/0${i++}.png` });
+  await page.screenshot({ path: `../screenshots/0${i++}.png` });
   await page.click(`${"input#idClient"} + button`);
   await page.waitForSelector(".modal-body .step3.in");
-  await page.screenshot({ path: `screenshots/0${i++}.png` });
+  await page.screenshot({ path: `../screenshots/0${i++}.png` });
 
   // Extract keyboard
   let audio = await page.evaluate(sel => {
@@ -60,14 +60,14 @@ async function run() {
   await CREDS.password.split("").forEach(async num => {
     await page.click(CELL_SELECTOR.replace("INDEX", cells[num] + 1));
   });
-  await page.screenshot({ path: `screenshots/0${i++}.png` });
+  await page.screenshot({ path: `../screenshots/0${i++}.png` });
 
   // Submit
   await page.click(
     'form.password-form .affClavierSecurise button[type="submit"].confirm'
   );
   await page.waitForNavigation();
-  await page.screenshot({ path: `screenshots/0${i++}.png` });
+  await page.screenshot({ path: `../screenshots/0${i++}.png` });
 
   // Go to history page
   await page.click(
@@ -77,7 +77,7 @@ async function run() {
   await page.waitForSelector(
     "#MM_HISTORIQUE_COMPTE #MM_HISTORIQUE_COMPTE_pnlPagination"
   );
-  await page.screenshot({ path: `screenshots/0${i++}.png` });
+  await page.screenshot({ path: `../screenshots/0${i++}.png` });
 
   // Read all pages
   let transactions = [];
@@ -88,7 +88,7 @@ async function run() {
       );
     }, "#MM_HISTORIQUE_COMPTE_lnkSuivante"))
   ) {
-    await page.screenshot({ path: `screenshots/0${i++}.png` });
+    await page.screenshot({ path: `../screenshots/0${i++}.png` });
 
     // Extract data
     let { headings, rows } = await page.evaluate(sel => {

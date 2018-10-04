@@ -13,7 +13,7 @@
     "dependencies": {
         "lodash": "^4.17.10",
         "puppeteer": "^1.4.0",
-        "sharp": "^0.20.2"
+        "sharp": "^0.21.0"
     },
     "devDependencies": {
         "eslint": "5.6.1",
